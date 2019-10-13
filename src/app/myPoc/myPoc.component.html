@@ -1,0 +1,102 @@
+<header>
+  <h3 (click)="getPrev('1')">MyFirstPOC</h3>
+</header>
+<div class="clear"></div>
+<section>
+  <div class="myCards" *ngFor="let list of response.data">
+    <img src="{{list.avatar}}">
+    <p>{{list.first_name}} {{list.last_name}}</p>
+    <p>{{list.email}}</p>
+    <div class="myBtns">
+      <button type="button" (click)="getUpdate(list)">Update</button>
+      <button type="button" (click)="deletePopUp(list.id)">Delete</button>
+    </div>
+  </div>
+  <div class="noDtaComing">
+    <p>Please check your internet connection...</p>
+  </div>
+  <div class="myCards beforeRegister">
+      <img src="{{response.avatar}}">
+      <p>{{response.first_name}} {{response.last_name}}</p>
+      <p>{{response.email}}</p>
+      <div class="myBtns">
+        <button type="button" (click)="getUpdate(response)">Update</button>
+        <button type="button" (click)="deletePopUp(response.id)">Delete</button>
+      </div>
+    </div>
+  <div class="clear"></div>
+  <div class="myBtns">
+    <button type="button" class="disabled" (click)="getPrev(response.page)">Prev</button>
+    <button type="button" class="disabled" (click)="getNext(response.page)">Next</button>
+  </div>
+</section>
+
+<div class="updateDetails">
+    <div class="form">
+      <h3>Update</h3>
+      <div class="innerSec">
+        <div class="formData">
+          <label>Name</label>
+          <input maxlength="15" type="text" [(ngModel)]="name">
+        </div>
+        <div class="formData">
+            <label>SurName</label>
+            <input maxlength="15" type="text" [(ngModel)]="surname">
+        </div>
+        <div class="formControl">
+          <button type="button" class="needMargin" (click)="updateDetails(name, surname);">Update</button>
+          <button type="button" class="needMargin" (click)="closeModal();">Close</button>
+        </div>
+      </div>
+  </div>
+</div>
+
+<button class="myAddBtn disabled" (click)="addUser();" title="Add User">+</button>
+
+<div class="addDetails">
+    <div class="form">
+      <h3>Add</h3>
+      <div class="innerSec">
+        <div class="formData">
+          <label>Name</label>
+          <input maxlength="15" type="text" name="name" [(ngModel)]="name" required>
+        </div>
+        <div class="formData">
+            <label>Last Name</label>
+            <input maxlength="15" type="text" name="lastname" [(ngModel)]="lastname" required>
+        </div>
+        <div class="formData">
+            <label>Email</label>
+            <input maxlength="22" type="email" name="email" [(ngModel)]="email" required>
+        </div>
+        <div class="formControl">
+          <button type="button" class="needMargin" (click)="addDetails(name, lastname, email);">Add</button>
+          <button type="button" class="needMargin" (click)="closeModal();">Close</button>
+        </div>
+    </div>
+    </div>
+  </div>
+
+  <div class="emptyData">
+      <div class="form">
+        <p></p>
+        <div class="formControl">
+          <button type="button" class="needMargin" (click)="closeModal();">Close</button>
+        </div>
+      </div>
+  </div>
+
+  <div class="deleteData">
+      <div class="form">
+        <h3>Delete</h3>
+        <div class="formData">
+          <p>Really want to delete...</p>
+        </div>
+        <div class="formControl">
+          <button type="button" class="needMargin" (click)="deleteUser();">Delete</button>
+          <button type="button" class="needMargin" (click)="closeModal();">Close</button>
+        </div>
+      </div>
+  </div>
+
+

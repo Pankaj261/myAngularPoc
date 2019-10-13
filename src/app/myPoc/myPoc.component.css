@@ -1,0 +1,197 @@
+body{
+    margin: 0px !important;
+}
+
+header{
+    width: 100%;
+    float: left;
+    background: #343c40;
+    color: #fff;
+    box-shadow: 0px 3px 3px 0px #736464;
+    margin: 0px 0px 40px 0px;
+}
+
+header h3{
+    padding: 0px 0px 0px 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+section{
+    width: 80%;
+    margin: 0 auto;
+}
+
+div.myCards{
+    width: 15%;
+    float: left;
+    text-align: center;
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
+    margin: 10px 10px 0px 0px;
+}
+
+div.myCards img{
+    width: 100%;
+}
+
+div.myCards p{
+    margin: 10px 0px 0px 0px;;
+    font-family: Verdana,sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+    font-weight: bold;
+}
+
+div.myBtns{
+    width: 100%;
+    float: left;
+    text-align: center;
+    margin: 10px 0px 10px 0px;
+}
+
+div.beforeRegister{
+    display: none;
+}
+
+div.formControl{
+    width: 100%;
+    text-align: center;
+    margin: 10px 0px 10px 0px;
+}
+
+div.myBtns button, div.formControl button{
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    outline: none;
+    border: 1px solid #ccc!important;
+    margin: 0px 10px 0px 0px;
+}
+
+div.myBtns button:hover, div.formControl button:hover{
+    background: #343c40;
+    color: #fff;
+    transition: 0.3s all;
+}
+
+div.clear{
+    clear: both;
+}
+
+div.updateDetails, .addDetails, .emptyData, .deleteData{
+    display: none;
+    width: 100%;
+    position: fixed;
+    background: #343c40c9;;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+button.disabled {
+    pointer-events: none;
+}
+
+div.noDtaComing p{
+    text-align: center;
+    color: red;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+
+div.form{
+    width: 40%;
+    margin: 250px auto;
+    background: #fff;
+    box-shadow: 0px 3px 3px 0px #736464;
+    border-radius: 4px;
+}
+
+div.form h3{
+    margin: 0px;
+    padding: 10px 0px 10px 0px;
+    width: 100%;
+    background: #343c40;
+    text-align: center;
+    color: #fff;
+}
+
+div.form p{
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+}
+
+div.innerSec{
+    padding: 10px 20px 10px 10px;
+}
+
+div.form label{
+    width: 100%;
+    float: left;
+    margin: 0px 0px 5px 0px;
+}
+
+div.form input{
+    width: 100%;
+    float: left;
+    margin: 0px 0px 5px 0px;
+    height: 30px;
+    padding: 0px 0px 0px 5px;
+}
+
+button.myAddBtn{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    outline: none;
+    border: none;
+    font-weight: bold;
+    background: #fff;
+    color: #343c40;
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    font-size: 25px;
+    box-shadow: 0px 3px 3px 0px #736464;
+    cursor: pointer;
+}
+
+button.myAddBtn:hover{
+    background: #343c40;
+    color: #fff;
+    transition: 0.3s all;
+}
+
+@media(max-width:767px){
+    div.myCards{
+        width: 100%;
+    }
+
+    div.form{
+        width: 80%;
+        margin: 100px auto;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1024px){
+    div.myCards{
+        width: 30%;
+        margin: 10px 20px 0px 0px;
+    }
+
+    div.form{
+        width: 80%;
+        margin: 100px auto;
+    }
+}
+
+
